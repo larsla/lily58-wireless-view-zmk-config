@@ -51,9 +51,9 @@
             display-name = "Lower";
             bindings = <
 &trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &kp LS(MINUS) &accent
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp RA(LT)  &kp LS(N7) &kp RA(MINUS)  &kp LS(N8)  &kp LS(N9)  &kp LS(RBKT)
+&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp RA(BSLH) &kp LS(N7) &kp RA(MINUS)  &kp LS(N8)  &kp LS(N9)  &kp LS(RBKT)
 &trans     &trans           &trans            &trans            &trans       &trans                       &kp LS(LBKT) &kp AMPS  &kp KP_MULTIPLY &kp RA(N7)  &kp RA(N0)  &kp TILDE
-&kp LT     &kp GT           &trans            &trans            &trans       &trans &kp RA(N7) &kp RA(N0) &trans    &kp LS(FSLH) &kp KP_PLUS     &kp RA(N8)  &kp RA(N9)  &kp PIPE
+&kp BSLH   &kp LS(BSLH)     &trans            &trans            &trans       &trans &kp RA(N7) &kp RA(N0) &trans    &kp LS(FSLH) &kp KP_PLUS     &kp RA(N8)  &kp RA(N9)  &kp PIPE
                                               &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
             >;
 
