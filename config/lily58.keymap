@@ -10,6 +10,15 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+    macros {
+        accent: accent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LS(EQUAL) &kp LS(EQUAL)>
+                ;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,10 +50,10 @@
 //                     |      |      |      |  SPACE |  | ENTER |      |       |       |
             display-name = "Lower";
             bindings = <
-&trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &kp LS(MINUS) &kp LS(EQUAL)
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp PIPE  &kp LS(N7) &kp RA(MINUS)  &kp LS(N8)  &kp LS(N9)  &kp LS(RBKT)
+&trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &kp LS(MINUS) &accent
+&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp RA(LT)  &kp LS(N7) &kp RA(MINUS)  &kp LS(N8)  &kp LS(N9)  &kp LS(RBKT)
 &trans     &trans           &trans            &trans            &trans       &trans                       &kp LS(LBKT) &kp AMPS  &kp KP_MULTIPLY &kp RA(N7)  &kp RA(N0)  &kp TILDE
-&trans     &trans           &trans            &trans            &trans       &trans &kp RA(N7) &kp RA(N0) &trans    &kp MINUS &kp KP_PLUS     &kp RA(N8)  &kp RA(N9)  &kp PIPE
+&kp LT     &kp GT           &trans            &trans            &trans       &trans &kp RA(N7) &kp RA(N0) &trans    &kp LS(FSLH) &kp KP_PLUS     &kp RA(N8)  &kp RA(N9)  &kp PIPE
                                               &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
             >;
 
