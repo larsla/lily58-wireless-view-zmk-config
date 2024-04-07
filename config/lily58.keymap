@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include "swe_keys.h"
 
+#define THIRD 3
+
 / {
     macros {
         accent: accent {
@@ -55,7 +57,7 @@
 &kp SE_GRAVE &kp SE_EXCL &kp SE_AT &kp SE_HASH &kp SE_DLLR &kp PRCNT                    &kp SE_PIPE  &kp SE_FSLH  &kp SE_BSLH &kp SE_LPAR &kp SE_RPAR  &trans
 &trans       &trans      &trans    &trans      &trans        &trans                       &kp SE_CARET &kp SE_AMPS  &kp SE_STAR &kp SE_LBRC &kp SE_RBRC  &trans
 &kp SE_LT    &kp SE_GT   &trans    &trans      &trans        &trans &kp RA(N7) &kp RA(N0) &trans       &kp SE_UNDER &kp KP_PLUS &kp SE_LBKT &kp SE_RBKT  &trans
-                                   &trans      &trans        &trans &trans     &trans     &trans       &trans       &trans
+                                   &trans      &trans        &trans &trans     &trans     &mo 3       &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -63,7 +65,7 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |  DEL  | 
+// |       |     |     |      |      |      |                   |      |       |       |      |       |  DEL  |
 // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
 // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  <-  |   v   |   ^   |  ->  |       |       |
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |  alt+8 |  | alt+9 | HOME | PGDN  | PGUP  | END  |       |       |
@@ -74,7 +76,26 @@
 &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
 &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans   &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp RA(N8) &kp RA(N9) &kp HOME &kp PG_DN &kp PG_UP &kp END &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+                        &trans  &trans  &mo 3    &trans   &trans    &trans      &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        third_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |       | bt 1 | bt 2 | bt 3 |      |      |                   |      |       |       |      |       |  DEL  |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  <-  |   v   |   ^   |  ->  |       |       |
+// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |  alt+8 |  | alt+9 | HOME | PGDN  | PGUP  | END  |       |       |
+//                     |      |      |      |        |  |       |      |       |       |
+            display-name = "Raise";
+            bindings = <
+&trans    &bt SEL 1 &bt SEL 2 &bt SEL 3  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &kp DEL
+&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
+&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans   &trans
+&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp RA(N8) &kp RA(N9) &kp HOME &kp PG_DN &kp PG_UP &kp END &kp RBKT  &kp BSLH
+                        &trans  &trans  &mo 3    &trans   &trans    &trans      &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
