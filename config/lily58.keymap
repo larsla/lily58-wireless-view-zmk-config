@@ -47,15 +47,15 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |   ?   |   `   |
-// |   `   |  !  |  "  |  #   |  $   |  %   |                   | "|"  |   /   |   \   |  (   |   )   |       |
-// |       |     |     |      |      |      |                   |  ^   |  &    |  *    |  {   |   }   |       |
+// |   `   |  !  |  "  |  #   |  $   |  %   |                   | "|"  |   /   |   \   |  (   |   )   |   ~   |
+// |       |     |     |      |      |      |                   |  ^   |  &    |  *    |  {   |   }   |   '   |
 // |   <   |  >  |     |      |      |      |  alt+7 |  | alt+0 |      |  _    |  +    |  [   |   ]   |       |
 //                     |      |      |      |  SPACE |  | ENTER |      |       |       |
             display-name = "Lower";
             bindings = <
 &trans       &trans      &trans    &trans      &trans        &trans                       &trans       &trans       &trans      &trans      &kp SE_QMARK &accent
-&kp SE_GRAVE &kp SE_EXCL &kp SE_AT &kp SE_HASH &kp SE_DLLR &kp PRCNT                    &kp SE_PIPE  &kp SE_FSLH  &kp SE_BSLH &kp SE_LPAR &kp SE_RPAR  &trans
-&trans       &trans      &trans    &trans      &trans        &trans                       &kp SE_CARET &kp SE_AMPS  &kp SE_STAR &kp SE_LBRC &kp SE_RBRC  &trans
+&kp SE_GRAVE &kp SE_EXCL &kp SE_AT &kp SE_HASH &kp SE_DLLR &kp PRCNT                    &kp SE_PIPE  &kp SE_FSLH  &kp SE_BSLH &kp SE_LPAR &kp SE_RPAR  &kp F7
+&trans       &trans      &trans    &trans      &trans        &trans                       &kp SE_CARET &kp SE_AMPS  &kp SE_STAR &kp SE_LBRC &kp SE_RBRC  &kp BSLH
 &kp SE_LT    &kp SE_GT   &trans    &trans      &trans        &trans &kp RA(N7) &kp RA(N0) &trans       &kp SE_UNDER &kp KP_PLUS &kp SE_LBKT &kp SE_RBKT  &trans
                                    &trans      &trans        &trans &trans     &trans     &mo 3       &trans       &trans
             >;
